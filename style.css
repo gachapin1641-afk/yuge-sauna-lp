@@ -1,0 +1,2007 @@
+/* ============================================
+   湯気サウナLP - スタイルシート
+   ============================================ */
+
+/* リセット・基本設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #2A2A2A;
+    background-color: #FAFAFA;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* タイポグラフィ */
+h1, h2, h3 {
+    line-height: 1.3;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.spec-number {
+    font-weight: 700;
+    color: #2A2A2A;
+    font-size: 1.1em;
+}
+
+/* セクションタイトル */
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 48px;
+    color: #2A2A2A;
+}
+
+@media (max-width: 767px) {
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 32px;
+    }
+}
+
+/* ============================================
+   ファーストビュー（ヒーローセクション）
+   ============================================ */
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('images/hero-background.jpg') center/cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 16px 40px;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-date {
+    font-size: 14px;
+    margin-bottom: 24px;
+    opacity: 0.9;
+}
+
+.hero-message h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 767px) {
+    .hero-message h1 {
+        font-size: 32px;
+    }
+}
+
+/* キャンペーン価格 */
+.campaign-price {
+    background: rgba(42, 42, 42, 0.8);
+    padding: 24px;
+    border-radius: 8px;
+    margin-bottom: 32px;
+}
+
+.price-highlight {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.badge {
+    background: #FFD700;
+    color: #2A2A2A;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.price-before {
+    font-size: 18px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.price-after {
+    font-size: 56px;
+    font-weight: 700;
+    color: #E63946;
+}
+
+.discount {
+    background: #E63946;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.sub-text {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+@media (max-width: 767px) {
+    .price-after {
+        font-size: 40px;
+    }
+}
+
+/* 温度セレクター */
+.temperature-selector {
+    margin-top: 40px;
+}
+
+.temp-label {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.temp-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    width: 100%;
+}
+
+.temp-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.temp-btn span {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+.temp-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 767px) {
+    .temp-buttons {
+        flex-direction: row;
+    }
+    
+    .temp-btn {
+        padding: 12px 16px;
+        font-size: 16px;
+        flex: 1;
+    }
+}
+
+/* ============================================
+   ボタンスタイル
+   ============================================ */
+
+.btn-primary {
+    display: inline-block;
+    background: #FF6B35;
+    color: white;
+    padding: 16px 48px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #E85A2A;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+.btn-hero {
+    margin-bottom: 16px;
+}
+
+.btn-large {
+    font-size: 20px;
+    padding: 20px 64px;
+}
+
+@media (max-width: 767px) {
+    .btn-primary {
+        width: 90%;
+        max-width: 400px;
+        padding: 16px 24px;
+    }
+}
+
+/* LINEボタン */
+.btn-line {
+    display: inline-block;
+    background: #06C755;
+    color: white;
+    padding: 16px 48px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-line:hover {
+    background: #05B04D;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(6, 199, 85, 0.3);
+}
+
+.btn-line-hero {
+    margin-top: 16px;
+}
+
+@media (max-width: 767px) {
+    .btn-line {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+/* ============================================
+   LINE友だち追加セクション
+   ============================================ */
+
+.line-cta-section {
+    background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+    padding: 48px 16px;
+    text-align: center;
+}
+
+.line-benefit h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: #2A2A2A;
+}
+
+.benefit-text {
+    font-size: 18px;
+    margin-bottom: 24px;
+    color: #2A2A2A;
+}
+
+.benefit-text strong {
+    color: #E63946;
+    font-size: 28px;
+}
+
+@media (max-width: 767px) {
+    .benefit-text strong {
+        font-size: 24px;
+    }
+}
+
+/* ============================================
+   POINTセクション（ここが選ばれる）
+   ============================================ */
+
+.point-section {
+    padding: 80px 16px;
+    background: #E8F5E9;
+}
+
+.point-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.point-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2A2A2A;
+    margin-bottom: 8px;
+}
+
+.point-header p {
+    font-size: 18px;
+    color: #666;
+}
+
+.reason-item {
+    margin-bottom: 64px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reason-image {
+    width: 100%;
+    margin-bottom: 24px;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.reason-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+}
+
+.reason-sub-images {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.sub-image {
+    width: calc(50% - 8px);
+    height: auto;
+    border-radius: 8px;
+}
+
+.reason-item h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #2A2A2A;
+}
+
+.reason-item .benefit-text {
+    font-size: 14px;
+    color: #E63946;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.reason-item .detail-text {
+    color: #666;
+    line-height: 1.8;
+}
+
+/* ============================================
+   実績セクション
+   ============================================ */
+
+.trust-section {
+    background: #F5F5F5;
+    padding: 64px 16px;
+    text-align: center;
+}
+
+.trust-section h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #2A2A2A;
+}
+
+.trust-stats {
+    display: flex;
+    justify-content: space-around;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.stat-item {
+    flex: 1;
+    min-width: 150px;
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: 700;
+    color: #E63946;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #666;
+}
+
+@media (max-width: 767px) {
+    .stat-number {
+        font-size: 28px;
+    }
+}
+
+/* ============================================
+   料金プランセクション
+   ============================================ */
+
+.plans {
+    padding: 80px 16px;
+    background: white;
+}
+
+.plans-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.plan-card {
+    background: white;
+    border-radius: 12px;
+    padding: 0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plan-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.plan-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.plan-card-content {
+    position: relative;
+    z-index: 1;
+    padding: 48px 32px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    max-width: 90%;
+}
+
+.plan-badge {
+    background: #FF6B35;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: inline-block;
+}
+
+.plan-title {
+    font-size: 22px;
+    margin-bottom: 24px;
+    color: #2A2A2A;
+}
+
+.plan-price {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.price-current {
+    font-size: 40px;
+    font-weight: 700;
+    color: #E63946;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.price-original {
+    font-size: 16px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.plan-features {
+    list-style: none;
+    margin-bottom: 32px;
+    min-height: 140px;
+}
+
+.plan-features li {
+    padding: 8px 0;
+    color: #2A2A2A;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.cta-wrapper {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.micro-copy {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.line-sub-cta {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+.line-sub-cta a {
+    color: #06C755;
+    text-decoration: none;
+    border-bottom: 1px solid #06C755;
+}
+
+.line-sub-cta a:hover {
+    color: #05B04D;
+}
+
+@media (max-width: 767px) {
+    .plans-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   施設情報セクション
+   ============================================ */
+
+.facility {
+    padding: 80px 16px;
+    background: #F5F5F5;
+}
+
+.facility-section {
+    margin-bottom: 48px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.facility-section h3 {
+    font-size: 22px;
+    margin-bottom: 16px;
+    color: #2A2A2A;
+    border-left: 4px solid #E63946;
+    padding-left: 16px;
+}
+
+.facility-list {
+    list-style: none;
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+.facility-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.facility-list li:last-child {
+    border-bottom: none;
+}
+
+/* ============================================
+   Q&Aセクション
+   ============================================ */
+
+.faq {
+    padding: 80px 16px;
+    background: white;
+}
+
+.faq-item {
+    margin-bottom: 32px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 24px;
+    background: #F9F9F9;
+    border-radius: 8px;
+}
+
+.faq-item h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #2A2A2A;
+}
+
+.faq-item p {
+    color: #666;
+    line-height: 1.8;
+}
+
+/* ============================================
+   予約セクション
+   ============================================ */
+
+.reservation {
+    padding: 32px 16px;
+    background: linear-gradient(135deg, #FFE5E5 0%, #FFD1D1 100%);
+    text-align: center;
+}
+
+.reservation-note {
+    margin-bottom: 32px;
+    color: #666;
+}
+
+/* ============================================
+   フッター
+   ============================================ */
+
+.footer {
+    background: #c8b89a;
+    color: #333;
+    padding: 24px 16px;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto 16px;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.footer-content p {
+    margin-bottom: 8px;
+    opacity: 1;
+    color: #333;
+}
+
+.footer-line {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(0,0,0,0.15);
+}
+
+.btn-line-footer {
+    margin-top: 16px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.7;
+    color: #333;
+}
+
+/* ============================================
+   スクロール追従CTA
+   ============================================ */
+
+.sticky-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    padding: 12px 16px;
+    z-index: 1000;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.sticky-cta.visible {
+    transform: translateY(0);
+}
+
+.btn-sticky {
+    display: block;
+    background: #E63946;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-sticky:hover {
+    background: #D32F3E;
+}
+
+/* デスクトップでは非表示 */
+@media (min-width: 768px) {
+    .sticky-cta {
+        display: none;
+    }
+}
+
+/* ============================================
+   スムーススクロール
+   ============================================ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================================
+   追加スタイル（index.htmlより移行）
+   ============================================ */
+        body {
+            padding-bottom: 60px;
+            background: #fff;
+        }
+        section.hero .hero-content {
+            max-width: 100% !important;
+            width: 100% !important;
+            padding-left: 24px !important;
+            padding-right: 24px !important;
+            box-sizing: border-box !important;
+        }
+        section.hero .campaign-price {
+            width: 100% !important;
+            box-sizing: border-box !important;
+        }
+        section.hero .hero-actions {
+            width: 100% !important;
+            box-sizing: border-box !important;
+        }
+        section.hero .temperature-selector {
+            width: 100% !important;
+            box-sizing: border-box !important;
+        }
+        .stove-section { margin-top: 8px; }
+        .stove-title {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            background: #f0e6d8;
+            border-radius: 8px;
+            padding: 12px 0;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+        .stove-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+        .stove-text {
+            flex: 1;
+            font-size: 14px;
+            line-height: 1.9;
+            color: #333;
+        }
+        .stove-img-wrap {
+            width: 143px;
+            height: 143px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .stove-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+        .rouryu-section {
+            margin-top: 8px;
+            background-image: url('images/rouryu2.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+            padding: 24px 20px !important;
+            position: relative;
+            overflow: hidden;
+        }
+        .rouryu-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 248, 235, 0.55);
+            border-radius: 12px;
+        }
+        .rouryu-title {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            background: rgba(240, 230, 216, 0.85);
+            border-radius: 8px;
+            padding: 12px 0;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .facility-section h3 {
+            display: block !important;
+            width: 100% !important;
+            text-align: center !important;
+            font-size: 24px !important;
+            font-weight: bold !important;
+            color: #333 !important;
+            background: #f0e6d8 !important;
+            border-radius: 8px !important;
+            padding: 12px 0 !important;
+            margin-bottom: 16px !important;
+            box-sizing: border-box !important;
+            border-left: none !important;
+        }
+        .rouryu-text {
+            position: relative;
+            font-size: 14px;
+            line-height: 2;
+            color: #2a1a00;
+            font-weight: 500;
+        }
+        .interior-section { margin-top: 8px; }
+        .interior-title {
+            display: inline-block;
+            background: #d4c5b0;
+            padding: 10px 28px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .interior-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+        .interior-text {
+            flex: 1;
+            font-size: 14px;
+            line-height: 1.9;
+            color: #333;
+        }
+        .interior-img-wrap {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+            margin-top: 8px;
+        }
+        .interior-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+        .hero-date {
+            font-size: 20px !important;
+        }
+        .temp-hint {
+            text-align: center;
+            font-size: 13px;
+            color: #fff;
+            margin-top: 8px;
+            opacity: 0.85;
+        }
+        .water-content {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .water-img-wrap {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .water-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+        .water-text-block {
+            flex: 1;
+        }
+        .water-text {
+            font-size: 13px;
+            line-height: 1.7;
+            color: #333;
+            margin: 8px 0;
+        }
+        .water-divider {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 6px 0;
+        }
+        .pricing-section { margin-top: 8px; }
+        .pricing-title {
+            display: block;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 0;
+            margin-bottom: 20px;
+            background: #f0e6d8;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .pricing-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .pricing-list li {
+            font-size: 14px;
+            color: #333;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            line-height: 1.6;
+        }
+        .pricing-list li:last-child {
+            border-bottom: none;
+        }
+        .pricing-list strong {
+            font-size: 15px;
+        }
+        .pricing-title--weekend {
+            background: #c0392b;
+            border: none;
+            color: #fff;
+        }
+        .pricing-title--option {
+            background: #f0e6d8;
+            border: none;
+            color: #333;
+        }
+        .facility-sub-heading {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            background: #f0e6d8;
+            border-radius: 8px;
+            padding: 12px 0;
+            margin-bottom: 20px;
+        }
+        .achievement-section {
+            padding: 32px 0;
+            background: #fff;
+        }
+        .achievement-title {
+            display: inline-block;
+            background: #f0e6d8;
+            border: 2px solid #b5a08a;
+            border-radius: 8px;
+            padding: 10px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 24px;
+        }
+        .achievement-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .achievement-list li {
+            font-size: 14px;
+            color: #333;
+            padding: 14px 0;
+            border-bottom: 1px solid #eee;
+            line-height: 1.7;
+        }
+        .achievement-list li:last-child {
+            border-bottom: none;
+        }
+        .achievement-score {
+            font-size: 20px;
+            color: #333;
+        }
+        .achievement-big {
+            font-size: 22px;
+            color: #333;
+        }
+        .achievement-sub {
+            font-size: 13px;
+            color: #666;
+        }
+        .rules-section {
+            padding: 16px 0 0;
+            background: #fff;
+        }
+        .rules-section .container {
+            padding-bottom: 0 !important;
+        }
+        .rules-block {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.8;
+            color: #333;
+        }
+        .rules-block:last-child {
+            margin-bottom: 0;
+        }
+        .rules-block p {
+            margin: 4px 0;
+        }
+        /* 予約ボタンエリア */
+        .reservation {
+            background: #fff;
+        }
+        .reservation .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+        }
+        .btn-reserve {
+            display: block;
+            width: 220px;
+            text-align: center;
+            padding: 14px 0;
+            border-radius: 24px;
+            font-size: 18px;
+            font-weight: bold;
+            background: #e8622a;
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid #e8622a;
+            transition: background 0.2s, color 0.2s;
+        }
+        .btn-reserve:hover {
+            background: transparent !important;
+            color: #e8622a !important;
+        }
+        .btn-reserve:active,
+        .btn-reserve.touch-active {
+            background: transparent !important;
+            color: #e8622a !important;
+        }
+        .btn-line-reserve {
+            display: block;
+            width: 220px;
+            text-align: center;
+            padding: 14px 0;
+            border-radius: 24px;
+            font-size: 18px;
+            font-weight: bold;
+            background: #06c755;
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid #06c755;
+            transition: background 0.2s, color 0.2s;
+        }
+        .btn-line-reserve:hover {
+            background: transparent !important;
+            color: #06c755 !important;
+        }
+        .btn-line-reserve:active,
+        .btn-line-reserve.touch-active {
+            background: transparent !important;
+            color: #06c755 !important;
+        }
+        .fixed-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            z-index: 9999;
+            box-shadow: 0 -2px 12px rgba(0,0,0,0.2);
+            pointer-events: none;
+        }
+        .fixed-cta a {
+            flex: 1;
+            text-align: center;
+            padding: 14px 8px;
+            font-size: 15px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            line-height: 1.3;
+            pointer-events: auto;
+        }
+        .fixed-cta .fixed-reserve {
+            background: #e8622a;
+        }
+        .fixed-cta .fixed-line {
+            background: #06c755;
+        }
+        .hero-sub {
+            font-size: 15px;
+            color: #fff;
+            margin-top: 8px;
+            margin-bottom: 0;
+            font-weight: bold;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+        }
+        .benefit-text {
+            font-size: 15px;
+            color: #e8622a;
+            font-weight: bold;
+            margin: 4px 16px 8px !important;
+        }
+        .achievement-badges {
+            display: flex;
+            justify-content: space-around;
+            padding: 16px 0;
+            gap: 8px;
+        }
+        .achievement-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #fff;
+            border-radius: 12px;
+            padding: 12px 8px;
+            flex: 1;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .badge-stars {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e8622a;
+        }
+        .badge-num {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e8622a;
+        }
+        .section-cta {
+            text-align: center;
+            padding: 24px 16px;
+            background: #fff;
+        }
+        .section-cta-btn {
+            display: inline-block;
+            padding: 14px 24px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 24px;
+            background: #e8622a;
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid #e8622a;
+        }
+            background: #c8b89a !important;
+            padding: 24px 16px !important;
+            color: #333 !important;
+        }
+        .footer {
+            background: #c8b89a !important;
+            color: #333 !important;
+            padding: 24px 16px !important;
+        }
+        .footer * {
+            color: #333 !important;
+        }
+        .footer-main {
+            text-align: center;
+            background: #c8b89a !important;
+        }
+        .footer .container {
+            max-width: 100% !important;
+            padding: 0 !important;
+        }
+        .footer-content {
+            background: #c8b89a !important;
+        }
+        .footer-logo-area {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        .footer-icon-wrap {
+            width: 56px;
+            height: 56px;
+            flex-shrink: 0;
+        }
+        .footer-icon-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .footer-name-block {
+            text-align: left;
+        }
+        .footer-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+            line-height: 1.3;
+        }
+        .footer-sub {
+            font-size: 13px;
+            color: #333;
+            margin: 0;
+        }
+        .footer-sns {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .sns-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #a08060;
+        }
+        .sns-img {
+            width: 28px;
+            height: 28px;
+            filter: brightness(0) invert(1);
+        }
+        .sns-img--twitter {
+            padding: 4px;
+        }
+        .sns-img--instagram {
+            padding: 4px;
+        }
+        .footer-email {
+            font-size: 14px;
+            color: #333;
+            text-align: center;
+            margin: 12px 0 4px;
+        }
+        .footer-copyright {
+            font-size: 13px;
+            color: #555;
+            text-align: center;
+            margin: 4px 0 0;
+        }
+        .plan-card-content {
+            display: none;
+        }
+        .plans {
+            padding: 0 !important;
+        }
+        .plans .container {
+            max-width: 100% !important;
+            padding: 0 !important;
+        }
+        .plans-grid {
+            max-width: 100% !important;
+            margin: 0 !important;
+            gap: 0 !important;
+        }
+        .plan-card {
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            min-height: 560px !important;
+        }
+        .plan-card--pair {
+            min-height: 640px !important;
+        }
+        .plan-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 226px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            padding-bottom: 8px;
+        }
+        .plan-badge {
+            background: #FF6B35;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 24px;
+        }
+        .plan-white-box {
+            background: rgba(255,255,255,0.95);
+            width: 100%;
+            padding: 12px 12px 0 12px;
+            box-sizing: border-box;
+        }
+        .plan-white-box .plan-features {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+        .point-section {
+            padding: 24px 0 24px 0 !important;
+        }
+        .point-header {
+            margin-bottom: 24px !important;
+            padding: 0 16px !important;
+        }
+        .point-header h2 {
+            font-size: 24px !important;
+            margin-bottom: 8px !important;
+        }
+        .point-header p {
+            font-size: 16px !important;
+        }
+        .point-section .container {
+            max-width: 100% !important;
+            padding: 0 !important;
+        }
+        .reason-item {
+            max-width: 100% !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+        .reason-image {
+            border-radius: 0 !important;
+        }
+        .plan-white-box .price-original {
+            margin-bottom: 16px !important;
+        }
+        .reason-item h3,
+        .reason-item .detail-text {
+            padding-left: 16px !important;
+            padding-right: 16px !important;
+        }
+        .plan-white-box .plan-features li:last-child {
+            border-bottom: none !important;
+            padding-bottom: 0 !important;
+        }
+        .plan-btn {
+            display: block !important;
+            width: 100% !important;
+            padding: 12px 8px !important;
+            font-size: 20px !important;
+            text-align: center !important;
+            white-space: normal !important;
+            line-height: 1.3 !important;
+            box-sizing: border-box !important;
+        }
+
+        .plan-line-box {
+            background: rgba(255,255,255,0.95);
+            display: inline-block;
+            align-self: center;
+            text-align: center;
+            padding: 6px 8px;
+            box-sizing: border-box;
+            font-size: 13px;
+            border-radius: 8px;
+        }
+        .plan-line-box a {
+            color: #06C755;
+            text-decoration: none;
+            border-bottom: 1px solid #06C755;
+        }
+        /* ============================================
+           SP版強制リセット（767px以下）
+        ============================================ */
+
+
+        /* ============================================
+           PC版レスポンシブ（768px以上）
+        ============================================ */
+        @media (min-width: 768px) {
+
+            /* 全体 */
+
+            .container {
+                max-width: 1100px !important;
+                margin: 0 auto !important;
+                padding: 0 32px !important;
+            }
+
+            /* ヒーロー */
+            .hero {
+                min-height: 600px;
+            }
+            .hero-content {
+                padding: 60px 80px;
+                max-width: 100% !important;
+            }
+            .hero h1 {
+                font-size: 72px !important;
+                white-space: normal !important;
+            }
+            section.hero .badge {
+                font-size: 40px !important;
+                padding: 6px 16px !important;
+            }
+            section.hero .price-after,
+            section.hero .price-now {
+                font-size: 72px !important;
+            }
+            .campaign-price .price-now,
+            .price-highlight .price-now {
+                font-size: 72px !important;
+            }
+            section.hero .price-before {
+                font-size: 36px !important;
+            }
+            section.hero .discount {
+                font-size: 40px !important;
+                padding: 6px 16px !important;
+            }
+            .hero-sub {
+                font-size: 56px !important;
+            }
+            .hero-date {
+                font-size: 56px !important;
+            }
+            .campaign-price p,
+            .sub-text {
+                font-size: 40px !important;
+            }
+            .btn-hero, .btn-line-hero {
+                font-size: 56px !important;
+                padding: 20px 48px !important;
+            }
+            section.hero .temp-label {
+                font-size: 40px !important;
+                white-space: nowrap !important;
+            }
+            section.hero .temp-btn {
+                font-size: 40px !important;
+                padding: 12px 24px !important;
+                white-space: nowrap !important;
+                flex: 1 !important;
+                min-width: 163px !important;
+            }
+            section.hero .temp-btn span {
+                font-size: 28px !important;
+            }
+            section.hero .temp-hint {
+                font-size: 24px !important;
+            }
+            section.hero .campaign-price {
+                max-width: 560px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                width: auto !important;
+            }
+            section.hero .hero-actions {
+                max-width: 560px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            section.hero .temperature-selector {
+                max-width: 560px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+            section.hero .temp-buttons {
+                width: 100% !important;
+            }
+
+            /* プランカード */
+            .plans .container {
+                max-width: 100% !important;
+                padding: 0 !important;
+            }
+            .plans-grid {
+                flex-direction: row !important;
+                align-items: flex-start !important;
+                gap: 0 !important;
+                padding: 0 !important;
+            }
+            .plan-badge {
+                font-size: 28px !important;
+                white-space: nowrap !important;
+                width: auto !important;
+                display: inline-block !important;
+            }
+            .plan-card {
+                flex: 1 !important;
+                min-height: 0 !important;
+                height: 980px !important;
+                border-radius: 0 !important;
+                box-shadow: none !important;
+                overflow: hidden !important;
+            }
+            .plan-card--pair {
+                height: 980px !important;
+                min-height: 0 !important;
+            }
+            .plan-overlay {
+                top: 0 !important;
+                bottom: 0 !important;
+                padding-top: 60px !important;
+                padding-bottom: 32px !important;
+                justify-content: flex-start !important;
+            }
+            .plan-overlay .plan-badge {
+                margin-top: 0 !important;
+            }
+            .price-current {
+                font-size: 56px !important;
+            }
+            .price-original {
+                font-size: 24px !important;
+            }
+            .plan-features li {
+                font-size: 24px !important;
+                padding: 10px 0 !important;
+            }
+            .plan-btn {
+                font-size: 28px !important;
+                padding: 16px 8px !important;
+            }
+            .plan-line-box {
+                font-size: 20px !important;
+                padding: 10px 12px !important;
+            }
+
+            /* POINTセクション */
+            .point-section .container {
+                max-width: 100% !important;
+                padding: 40px 0 !important;
+            }
+            .point-header h2 {
+                font-size: 56px !important;
+            }
+            .point-header p {
+                font-size: 28px !important;
+            }
+            .reasons-grid {
+                display: flex !important;
+                flex-direction: row !important;
+                gap: 0 !important;
+            }
+            .reason-item {
+                flex: 1 !important;
+            }
+            .reason-image {
+                height: 340px !important;
+                width: 100% !important;
+            }
+            .reason-item h3 {
+                font-size: 28px !important;
+            }
+            .reason-item p,
+            .benefit-text {
+                font-size: 22px !important;
+            }
+
+            /* 実績バッジ */
+            .achievement-badges {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+            .achievement-section h2 {
+                font-size: 48px !important;
+            }
+            .badge-num, .badge-stars {
+                font-size: 56px !important;
+            }
+            .achievement-badge p {
+                font-size: 24px !important;
+            }
+            .achievement-section .achievement-text,
+            .achievement-section p:not(.badge-num):not(.badge-stars) {
+                font-size: 22px !important;
+            }
+
+            /* 施設画像2倍 */
+            .stove-img-wrap {
+                width: 286px !important;
+                height: 286px !important;
+                flex-shrink: 0 !important;
+            }
+            .interior-img-wrap {
+                width: 260px !important;
+                height: 260px !important;
+                flex-shrink: 0 !important;
+            }
+            .water-img-wrap {
+                width: 260px !important;
+                height: 260px !important;
+                flex-shrink: 0 !important;
+            }
+            .stove-content,
+            .interior-content,
+            .water-content {
+                flex-direction: row !important;
+                align-items: center !important;
+                gap: 32px !important;
+            }
+            .facility .container {
+                max-width: 1100px !important;
+                padding: 40px 32px !important;
+            }
+            .facility h2 {
+                font-size: 48px !important;
+            }
+            .facility h3,
+            .stove-title, .rouryu-title, .interior-title,
+            .pricing-title {
+                font-size: 48px !important;
+            }
+            .rules-section h2 {
+                font-size: 48px !important;
+            }
+            .rules-block p, .rules-block li {
+                font-size: 22px !important;
+            }
+            .facility p, .facility li, .facility td, .facility th {
+                font-size: 22px !important;
+            }
+            .facility .stove-description p {
+                font-size: 22px !important;
+            }
+            .pricing-list li {
+                font-size: 20px !important;
+            }
+            .pricing-list strong {
+                font-size: 20px !important;
+            }
+
+            /* FAQ・口コミ */
+            .faq .container {
+                max-width: 900px !important;
+                margin: 0 auto !important;
+                padding: 40px 32px !important;
+            }
+            .faq h2 {
+                font-size: 48px !important;
+            }
+            .faq-question {
+                font-size: 24px !important;
+            }
+            .faq-answer {
+                font-size: 22px !important;
+            }
+            .faq-item h3 {
+                font-size: 24px !important;
+            }
+            .faq-item p {
+                font-size: 22px !important;
+            }
+            .facility-sub-heading {
+                font-size: 48px !important;
+            }
+            .review-section h2, .testimonials h2 {
+                font-size: 48px !important;
+            }
+            .review-card, .testimonial-card {
+                font-size: 22px !important;
+            }
+            .review-name, .reviewer-name {
+                font-size: 22px !important;
+            }
+
+            /* フッター */
+            .footer .container {
+                max-width: 1100px !important;
+                padding: 32px !important;
+            }
+            .footer {
+                background: #c8b89a !important;
+            }
+            .footer-logo-area {
+                gap: 24px !important;
+                margin-bottom: 20px !important;
+            }
+            .footer-icon-wrap {
+                width: 80px !important;
+                height: 80px !important;
+            }
+            .footer-name {
+                font-size: 22px !important;
+            }
+            .footer-sub {
+                font-size: 18px !important;
+            }
+            .footer-sns {
+                gap: 16px !important;
+            }
+            .sns-icon {
+                width: 70px !important;
+                height: 70px !important;
+            }
+            .sns-img {
+                width: 54px !important;
+                height: 54px !important;
+            }
+            .footer-email {
+                font-size: 22px !important;
+            }
+            .footer-copyright {
+                font-size: 18px !important;
+            }
+            .btn-reserve {
+                font-size: 48px !important;
+                padding: 20px 64px !important;
+                white-space: nowrap !important;
+                width: auto !important;
+                display: inline-block !important;
+            }
+            .btn-line-reserve {
+                font-size: 48px !important;
+                padding: 20px 64px !important;
+                white-space: nowrap !important;
+                width: auto !important;
+                display: inline-block !important;
+            }
+
+            /* 固定CTA */
+            .fixed-cta {
+                max-width: 480px !important;
+                left: 50% !important;
+                transform: translateX(-50%) !important;
+                border-radius: 12px 12px 0 0 !important;
+            }
+            .fixed-cta a {
+                font-size: 18px !important;
+                padding: 16px !important;
+            }
+
+            /* セクションCTA */
+            .section-cta-btn {
+                font-size: 48px !important;
+                padding: 20px 64px !important;
+            }
+            .achievement-section p {
+                font-size: 24px !important;
+            }
+        }
+
+/* ============================================
+   予約フォームページ（reservation.html）
+   ============================================ */
+
+.page-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 8px;
+    color: #2A2A2A;
+}
+
+.page-subtitle {
+    font-size: 14px;
+    text-align: center;
+    color: #666;
+    margin-bottom: 32px;
+}
+
+.plan-section {
+    margin-bottom: 32px;
+}
+
+.section-label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #2A2A2A;
+}
+
+.required {
+    background: #e8622a;
+    color: white;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-left: 8px;
+    font-weight: normal;
+}
+
+.plan-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.plan-card {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.plan-card:hover {
+    border-color: #e8622a;
+}
+
+.plan-card.selected {
+    border-color: #e8622a;
+    background: #FFF5F0;
+}
+
+.plan-card input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #e8622a;
+    flex-shrink: 0;
+}
+
+.plan-info {
+    flex: 1;
+}
+
+.plan-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2A2A2A;
+}
+
+.plan-detail {
+    font-size: 13px;
+    color: #666;
+    margin-top: 4px;
+}
+
+.plan-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e8622a;
+    white-space: nowrap;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-label {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #2A2A2A;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Noto Sans JP', sans-serif;
+    transition: border-color 0.2s;
+    background: white;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #e8622a;
+}
+
+.form-select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: white;
+    cursor: pointer;
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: #e8622a;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background: #e8622a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Noto Sans JP', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-bottom: 16px;
+}
+
+.submit-btn:hover {
+    background: #c8501f;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+.back-link:hover {
+    color: #e8622a;
+}
+
+.note {
+    font-size: 13px;
+    color: #666;
+    margin-top: 8px;
+    line-height: 1.6;
+}
+
+.success-message {
+    display: none;
+    text-align: center;
+    padding: 40px 16px;
+}
+
+.success-message.show {
+    display: block;
+}
+
+.success-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.success-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.success-text {
+    color: #666;
+    line-height: 1.8;
+}
+
+.form-content.hide {
+    display: none;
+}

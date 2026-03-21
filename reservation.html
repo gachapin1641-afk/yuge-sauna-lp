@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ご予約フォーム | 湯気 - YUGE Sauna & Spa 神田</title>
+    <meta name="description" content="湯気 YUGE Sauna & Spa 神田のご予約はこちら。10周年記念キャンペーン開催中。">
+    <link rel="canonical" href="https://yuge-sauna.jp/reservation.html">
+    <meta property="og:title" content="ご予約フォーム | 湯気 - YUGE Sauna & Spa 神田">
+    <meta property="og:description" content="湯気 YUGE Sauna & Spa 神田のご予約はこちら。10周年記念キャンペーン開催中。">
+    <meta property="og:image" content="https://yuge-sauna.jp/images/hero-background.jpg">
+    <meta property="og:url" content="https://yuge-sauna.jp/reservation.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="web-app-manifest-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="web-app-manifest-512x512.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <div class="header">
+        <a href="index.html">
+            <p class="header-name">湯気-YUGE</p>
+            <p class="header-sub">Sauna & Spa 神田</p>
+        </a>
+    </div>
+
+    <div class="container">
+
+        <!-- フォーム -->
+        <div class="form-content" id="formContent">
+            <h1 class="page-title">ご予約フォーム</h1>
+            <p class="page-subtitle">必要事項をご入力の上、送信してください。</p>
+
+            <!-- プラン選択 -->
+            <div class="plan-section">
+                <p class="section-label">プランを選んでください <span class="required">必須</span></p>
+                <div class="plan-cards">
+                    <label class="plan-card" id="card1">
+                        <input type="radio" name="plan" value="10周年パック ¥1,600">
+                        <div class="plan-info">
+                            <p class="plan-name">10周年パック</p>
+                            <p class="plan-detail">90分・サウナ2セット・ドリンク付き</p>
+                        </div>
+                        <p class="plan-price">¥1,600</p>
+                    </label>
+
+                    <label class="plan-card" id="card2">
+                        <input type="radio" name="plan" value="ペア割 ¥4,600">
+                        <div class="plan-info">
+                            <p class="plan-name">ペア割</p>
+                            <p class="plan-detail">2名様・120分・リクライニング確保</p>
+                        </div>
+                        <p class="plan-price">¥4,600</p>
+                    </label>
+
+                    <label class="plan-card" id="card3">
+                        <input type="radio" name="plan" value="朝活ととのい ¥1,400">
+                        <div class="plan-info">
+                            <p class="plan-name">朝活ととのい</p>
+                            <p class="plan-detail">7:00〜10:00入館・平日先着20名</p>
+                        </div>
+                        <p class="plan-price">¥1,400</p>
+                    </label>
+                </div>
+            </div>
+
+            <!-- お名前 -->
+            <div class="form-group">
+                <label class="form-label" for="name">お名前 <span class="required">必須</span></label>
+                <input type="text" id="name" class="form-input" placeholder="例：山田 太郎">
+            </div>
+
+            <!-- メールアドレス -->
+            <div class="form-group">
+                <label class="form-label" for="email">メールアドレス <span class="required">必須</span></label>
+                <input type="email" id="email" class="form-input" placeholder="例：example@email.com">
+            </div>
+
+            <!-- 電話番号 -->
+            <div class="form-group">
+                <label class="form-label" for="tel">電話番号</label>
+                <input type="tel" id="tel" class="form-input" placeholder="例：090-0000-0000">
+            </div>
+
+            <!-- 希望日時 -->
+            <div class="form-group">
+                <label class="form-label" for="date">希望日時 <span class="required">必須</span></label>
+                <input type="datetime-local" id="date" class="form-input">
+            </div>
+
+            <!-- 人数 -->
+            <div class="form-group">
+                <label class="form-label" for="people">人数 <span class="required">必須</span></label>
+                <select id="people" class="form-select">
+                    <option value="">選択してください</option>
+                    <option value="1">1名</option>
+                    <option value="2">2名</option>
+                    <option value="3">3名</option>
+                    <option value="4">4名以上</option>
+                </select>
+            </div>
+
+            <!-- 送信ボタン -->
+            <button class="submit-btn" onclick="submitForm()">予約を送信する</button>
+            <p class="note">※ 送信後、確認メールをお送りします。<br>※ 混雑状況によりご希望に添えない場合があります。</p>
+            <a href="index.html" class="back-link">← トップページへ戻る</a>
+        </div>
+
+        <!-- 完了メッセージ -->
+        <div class="success-message" id="successMessage">
+            <div class="success-icon">✅</div>
+            <h2 class="success-title">予約を受け付けました！</h2>
+            <p class="success-text">
+                ご予約ありがとうございます。<br>
+                確認メールをお送りしますので、<br>
+                しばらくお待ちください。<br><br>
+                ご不明な点はLINEにてお気軽にお問い合わせください。
+            </p>
+            <br>
+            <a href="index.html" class="back-link">← トップページへ戻る</a>
+        </div>
+
+    </div>
+
+    <script>
+        // プランカードのハイライト
+        document.querySelectorAll('.plan-card input[type="radio"]').forEach(function(radio) {
+            radio.addEventListener('change', function() {
+                document.querySelectorAll('.plan-card').forEach(function(card) {
+                    card.classList.remove('selected');
+                });
+                this.closest('.plan-card').classList.add('selected');
+            });
+        });
+
+        // フォーム送信
+        function submitForm() {
+            var plan = document.querySelector('input[name="plan"]:checked');
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var date = document.getElementById('date').value;
+            var people = document.getElementById('people').value;
+
+            if (!plan) {
+                alert('プランを選択してください');
+                return;
+            }
+            if (!name) {
+                alert('お名前を入力してください');
+                return;
+            }
+            if (!email) {
+                alert('メールアドレスを入力してください');
+                return;
+            }
+            if (!date) {
+                alert('希望日時を入力してください');
+                return;
+            }
+            if (!people) {
+                alert('人数を選択してください');
+                return;
+            }
+
+            // 完了画面へ
+            document.getElementById('formContent').classList.add('hide');
+            document.getElementById('successMessage').classList.add('show');
+            window.scrollTo(0, 0);
+        }
+    </script>
+
+</body>
+</html>
