@@ -450,7 +450,7 @@ strong {
     margin: 0 auto;
 }
 
-.plan-card {
+.plans .plan-card {
     background: white;
     border-radius: 12px;
     padding: 0;
@@ -464,7 +464,7 @@ strong {
     justify-content: center;
 }
 
-.plan-card:hover {
+.plans .plan-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
@@ -1317,12 +1317,12 @@ html {
             margin: 0 !important;
             gap: 0 !important;
         }
-        .plan-card {
+        .plans .plan-card {
             border-radius: 0 !important;
             box-shadow: none !important;
             min-height: 560px !important;
         }
-        .plan-card--pair {
+        .plans .plan-card--pair {
             min-height: 640px !important;
         }
         .plan-overlay {
@@ -1541,7 +1541,7 @@ html {
                 width: auto !important;
                 display: inline-block !important;
             }
-            .plan-card {
+            .plans .plan-card {
                 flex: 1 !important;
                 min-height: 0 !important;
                 height: 980px !important;
@@ -1549,7 +1549,7 @@ html {
                 box-shadow: none !important;
                 overflow: hidden !important;
             }
-            .plan-card--pair {
+            .plans .plan-card--pair {
                 height: 980px !important;
                 min-height: 0 !important;
             }
@@ -2004,4 +2004,29 @@ html {
 
 .form-content.hide {
     display: none;
+}
+
+/* ===== 予約フォーム ヘッダー ===== */
+.header {
+    background: #1a1a1a;
+    padding: 16px 24px;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.header-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 0.05em;
+}
+
+.header-sub {
+    font-size: 12px;
+    color: #aaaaaa;
+    margin: 2px 0 0 0;
+    letter-spacing: 0.03em;
 }
